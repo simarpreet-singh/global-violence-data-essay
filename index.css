@@ -84,7 +84,7 @@
   text-align: center;
   /* height: 100%; */
 }
-#nextButton:hover {
+.nextButton:hover {
   cursor: pointer;
 }
 .int_stat {
