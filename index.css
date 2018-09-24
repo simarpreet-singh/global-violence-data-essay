@@ -183,8 +183,7 @@
 }
 .content_area {
   height: 100vh;
-  padding-top: 5%;
-  padding-left: 5%; padding-right: 5%;
+  padding-top: 3%;
   display: flex;
   flex-direction: column;
   justify-content: center;
