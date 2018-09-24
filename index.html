@@ -155,10 +155,27 @@
               Intimate Partner Violence
             </mark>
           </h1>
-          <p>
-            Though the vast majority of people killed are men, how are women uniquely affected?
-          </p>
+          <div class="para_div">
+            <p class="para_basic" id="para_area">
+              Though the vast majority of people killed are men, how are women uniquely affected?
+            </p>
+          </div>
 
+          <a onclick="nextPara()">
+          <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
+                      <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
+                      <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
+                          <tspan x="73" y="1213">NEXT</tspan>
+                      </text>
+                  </g>
+              </g>
+          </svg>
+          </a>
       </div>
     </div>
   </section>
@@ -212,6 +229,27 @@
       document.getElementById('name').innerHTML = violence_types[names[i]]['name'];
       document.getElementById(names[i]).classList.add("highlighted_bar");
       document.getElementById(names[i-1]).classList.remove("highlighted_bar");
+    }
+
+    var para_text = ["Though the vast majority of people killed are men, how are women uniquely affected?",
+    "While the vast majority of people killed globally are men (84% in 2016), there are areas where women are disproportionately killed. Especially in “homicides that are related to intimate partner violence (IPV)” (Norman and Bradshaw, 2013, p. 836).",
+    "While countries with larger populations have more women killed, “In industrialized countries, a general decrease in homicide rates has not been accompanied by an equivalent decline in the violent deaths of women, in part because levels of intimate partner homicide remain high.”",
+    "Learn more about Intimate Partner Violence in the <b>United States</b> in our <a target='_blank' href='http://google.com/about'>essay about Murder-Suicides.</a>"
+    ];
+
+    var para_main = document.getElementById('para_area');
+    k = 0;
+
+    function nextPara() {
+      if (k == para_text.length-1) {
+        para_main.classList.remove("reg_para");
+        k = 0;
+      } else {
+        para_main.classList.add("reg_para");
+        k++;
+      }
+      let current_text = para_text[k].toString();
+      para_main.innerHTML=current_text;
     }
 
     // for (var i = 0; i < names.length; i++) {
