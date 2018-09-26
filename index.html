@@ -7,179 +7,191 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- bootstrap js -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jquery one page scroll -->
+    <script src="jquery.onepage-scroll.js" charset="utf-8"></script>
+    <!-- one page scroll CSS -->
+    <link rel="stylesheet" href="onepage-scroll.css">
+    <!-- Call one page scroll -->
+    <script src="call-scroll.js" charset="utf-8"></script>
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
+
   </head>
   <body>
-  <section class="main_section intro_background">
-    <div>
-      <a href="http://likhari.cool">
-        <p class="brand">Likhari</p>
-      </a>
-    </div>
-    <div class="container">
-      <div>
-        <div class="intro_text">
-          <h1>
-            Global <br> Violence
-          </h1>
-
-          <p class="lead">
-            Breaking down Global Violence.
-            How people die. Who dies. Where.
-            And Why.
-          </p>
+    <div class="main">
+      <section class="main_section intro_background">
+        <div>
+          <a href="http://likhari.cool">
+            <p class="brand animated fadeIn">Likhari</p>
+          </a>
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="container">
+          <div>
+            <div class="intro_text">
+              <h1 class="animated fadeIn">
+                Global <br> Violence
+              </h1>
 
-  <section class="main_section first_background">
-    <div class="container">
-      <div class="heading_text">
-        <h1>
-          <mark class="h1_highlight">How Many Die?</mark>
-        </h1>
-        <h3>
-          In 2016, <b>560,000+</b> people were killed as a result <br>of some type of violence.
-        </h3>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div class="left_cont">
-            <h2 class="int_stat" id="percentage"></h2>
-            <h3 class="int_exp">Were Killed Due To <br> <span class="int_exp_bold" id="name"></span>.</h3>
-            <p class="int_an">This equates to <span class="int_an_bold" id="num"></span> deaths.</p>
+              <p class="lead">
+                <span class="animated fadeIn delay-2s">Breaking down Global Violence.</span>
+                <span class="animated fadeIn delay-3s slow">How people die. Who dies. Where.</span>
+                <span class="animated fadeIn delay-4s slower">And Why.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <a onclick="nextStat()">
-            <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
+      <section class="main_section first_background">
+        <div class="container">
+          <div class="heading_text">
+            <h1 class="animated fadeIn delay-2s">
+              <mark class="h1_highlight">How Many Die?</mark>
+            </h1>
+            <h3>
+              In 2016, <b>560,000+</b> people were killed as a result <br>of some type of violence.
+            </h3>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="left_cont">
+                <h2 class="int_stat" id="percentage"></h2>
+                <h3 class="int_exp">Were Killed Due To <br> <span class="int_exp_bold" id="name"></span>.</h3>
+                <p class="int_an">This equates to <span class="int_an_bold" id="num"></span> deaths.</p>
+
+                <a onclick="nextStat()">
+                <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
+                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
+                            <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
+                            <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
+                                <tspan x="73" y="1213">NEXT</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+              </a>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="right_cont">
+                <svg width="333px" height="190px" viewBox="0 0 333 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Desktop" transform="translate(-534.000000, -1013.000000)" fill="#31405D">
+                            <rect id="direct_conflict_deaths" class="highlighted_bar" transform="translate(565.500000, 1177.889999) scale(1, -1) translate(-565.500000, -1177.889999) " x="534" y="1152.78" width="63" height="50.2200012" ></rect>
+                            <rect id="intentional_homicides" transform="translate(655.500000, 1108.139999) scale(1, -1) translate(-655.500000, -1108.139999) " x="624" y="1013.28" width="63" height="189.720001"></rect>
+                            <rect id="unintentional_homicides" transform="translate(745.500000, 1189.050000) scale(1, -1) translate(-745.500000, -1189.050000) " x="714" y="1175.1" width="63" height="27.8999996"></rect>
+                            <rect id="legal_interventions" transform="translate(835.500000, 1198.815000) scale(1, -1) translate(-835.500000, -1198.815000) " x="804" y="1194.63" width="63" height="8.36999989"></rect>
+                        </g>
+                    </g>
+                </svg>
+                <svg width="394px" height="7px" viewBox="0 0 394 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                        <g id="Desktop" transform="translate(-509.000000, -1217.000000)" stroke="#31405D" stroke-width="6">
+                            <path d="M512.945488,1220.5 L900,1220.5" id="Line"></path>
+                        </g>
+                    </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main_section second_background">
+        <div class="container">
+          <p class="second_text">Globaly there are <span class="second_section_stat">7.5</span> violent deaths per 100,000 people. Most of these events are outside of war zones.</p>
+          <div class="container_in_container">
+            <svg width="591px" height="300px" viewBox="0 0 591 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="globes_svg">
                 <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
                 <desc>Created with Sketch.</desc>
                 <defs></defs>
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
-                        <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
-                        <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
-                            <tspan x="73" y="1213">NEXT</tspan>
+                    <g id="Desktop" transform="translate(-221.000000, -1541.000000)">
+                        <circle id="Oval" fill="#31405D" cx="512" cy="1730" r="83"></circle>
+                        <g id="Group-8" transform="translate(588.000000, 1763.000000)"  >
+                            <circle id="Oval-2-Copy-5" fill="#CF6766" cx="196.5" cy="30.5" r="27.5"></circle>
+                            <path d="M0.5,0.5 L168.5,27.5" id="Line-8" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-2" transform="translate(285.000000, 1768.000000)">
+                            <circle id="Oval-2-Copy-6" fill="#CF6766" cx="27.5" cy="45.5" r="27.5"></circle>
+                            <path d="M152.5,0.5 L53.5,35.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-3" transform="translate(221.000000, 1620.000000)">
+                            <circle id="Oval-2" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
+                            <path d="M208.5,96.5 L49.5,44.5" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-4" transform="translate(312.000000, 1568.000000)">
+                            <circle id="Oval-2-Copy" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
+                            <path d="M137.5,106.5 L46.5,47.5" id="Line-4" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-5" transform="translate(457.000000, 1565.000000)">
+                            <circle id="Oval-2-Copy-2" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
+                            <path d="M40.5,82.5 L33.5,54.5" id="Line-5" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-6" transform="translate(554.000000, 1541.000000)">
+                            <circle id="Oval-2-Copy-3" fill="#CF6766" cx="152.5" cy="27.5" r="27.5"></circle>
+                            <path d="M0.5,117.5 L129.5,43.5" id="Line-6" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-7" transform="translate(595.000000, 1675.000000)">
+                            <circle id="Oval-2-Copy-4" fill="#CF6766" cx="111.5" cy="27.5" r="27.5"></circle>
+                            <path d="M0.5,48.5 L84.5,30.5" id="Line-7" stroke="#979797" stroke-linecap="square"></path>
+                        </g>
+                        <text id="100,000" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFF5F6">
+                            <tspan x="461" y="1740">100,000</tspan>
                         </text>
                     </g>
                 </g>
             </svg>
-          </a>
           </div>
         </div>
-        <div class="col-6">
-          <div class="right_cont">
-            <svg width="333px" height="190px" viewBox="0 0 333 190" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="Desktop" transform="translate(-534.000000, -1013.000000)" fill="#31405D">
-                        <rect id="direct_conflict_deaths" class="highlighted_bar" transform="translate(565.500000, 1177.889999) scale(1, -1) translate(-565.500000, -1177.889999) " x="534" y="1152.78" width="63" height="50.2200012" ></rect>
-                        <rect id="intentional_homicides" transform="translate(655.500000, 1108.139999) scale(1, -1) translate(-655.500000, -1108.139999) " x="624" y="1013.28" width="63" height="189.720001"></rect>
-                        <rect id="unintentional_homicides" transform="translate(745.500000, 1189.050000) scale(1, -1) translate(-745.500000, -1189.050000) " x="714" y="1175.1" width="63" height="27.8999996"></rect>
-                        <rect id="legal_interventions" transform="translate(835.500000, 1198.815000) scale(1, -1) translate(-835.500000, -1198.815000) " x="804" y="1194.63" width="63" height="8.36999989"></rect>
-                    </g>
-                </g>
-            </svg>
-            <svg width="394px" height="7px" viewBox="0 0 394 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                    <g id="Desktop" transform="translate(-509.000000, -1217.000000)" stroke="#31405D" stroke-width="6">
-                        <path d="M512.945488,1220.5 L900,1220.5" id="Line"></path>
-                    </g>
-                </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="main_section second_background">
-    <div class="container">
-      <p class="second_text">Globaly there are <span class="second_section_stat">7.5</span> violent deaths per 100,000 people. Most of these events are outside of war zones.</p>
-      <div class="container_in_container">
-        <svg width="591px" height="300px" viewBox="0 0 591 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="globes_svg">
-            <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-            <desc>Created with Sketch.</desc>
-            <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Desktop" transform="translate(-221.000000, -1541.000000)">
-                    <circle id="Oval" fill="#31405D" cx="512" cy="1730" r="83"></circle>
-                    <g id="Group-8" transform="translate(588.000000, 1763.000000)"  >
-                        <circle id="Oval-2-Copy-5" fill="#CF6766" cx="196.5" cy="30.5" r="27.5"></circle>
-                        <path d="M0.5,0.5 L168.5,27.5" id="Line-8" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-2" transform="translate(285.000000, 1768.000000)">
-                        <circle id="Oval-2-Copy-6" fill="#CF6766" cx="27.5" cy="45.5" r="27.5"></circle>
-                        <path d="M152.5,0.5 L53.5,35.5" id="Line-2" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-3" transform="translate(221.000000, 1620.000000)">
-                        <circle id="Oval-2" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
-                        <path d="M208.5,96.5 L49.5,44.5" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-4" transform="translate(312.000000, 1568.000000)">
-                        <circle id="Oval-2-Copy" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
-                        <path d="M137.5,106.5 L46.5,47.5" id="Line-4" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-5" transform="translate(457.000000, 1565.000000)">
-                        <circle id="Oval-2-Copy-2" fill="#CF6766" cx="27.5" cy="27.5" r="27.5"></circle>
-                        <path d="M40.5,82.5 L33.5,54.5" id="Line-5" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-6" transform="translate(554.000000, 1541.000000)">
-                        <circle id="Oval-2-Copy-3" fill="#CF6766" cx="152.5" cy="27.5" r="27.5"></circle>
-                        <path d="M0.5,117.5 L129.5,43.5" id="Line-6" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <g id="Group-7" transform="translate(595.000000, 1675.000000)">
-                        <circle id="Oval-2-Copy-4" fill="#CF6766" cx="111.5" cy="27.5" r="27.5"></circle>
-                        <path d="M0.5,48.5 L84.5,30.5" id="Line-7" stroke="#979797" stroke-linecap="square"></path>
-                    </g>
-                    <text id="100,000" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFF5F6">
-                        <tspan x="461" y="1740">100,000</tspan>
-                    </text>
-                </g>
-            </g>
-        </svg>
-      </div>
-    </div>
-  </section>
-  <section class="main_section third_background">
-    <div class="container">
-      <div class="content_area">
+      </section>
+      <section class="main_section third_background">
+        <div class="container">
+          <div class="content_area">
 
-          <h1>
-            <mark>
-              Intimate Partner Violence
-            </mark>
-          </h1>
-          <div class="para_div">
-            <p class="para_basic" id="para_area">
-              Though the vast majority of people killed are men, how are women uniquely affected?
-            </p>
-          </div>
+              <h1>
+                <mark>
+                  Intimate Partner Violence
+                </mark>
+              </h1>
+              <div class="para_div">
+                <p class="para_basic" id="para_area">
+                  Though the vast majority of people killed are men, how are women uniquely affected?
+                </p>
+              </div>
 
-          <a onclick="nextPara()">
-          <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
-              <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
-                      <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
-                      <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
-                          <tspan x="73" y="1213">NEXT</tspan>
-                      </text>
+              <a onclick="nextPara()">
+              <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
+                  <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
+                          <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
+                          <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
+                              <tspan x="73" y="1213">NEXT</tspan>
+                          </text>
+                      </g>
                   </g>
-              </g>
-          </svg>
-          </a>
-      </div>
+              </svg>
+              </a>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-
   </body>
   <script type="text/javascript">
     const violence_types = {
@@ -255,6 +267,9 @@
     // for (var i = 0; i < names.length; i++) {
     //   document.getElementById('num').innerHTML = violence_types[names[i]]['num'];
     // }
+
+  </script>
+  <script type="text/javascript">
 
   </script>
 </html>
