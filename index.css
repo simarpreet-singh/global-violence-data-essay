@@ -215,3 +215,40 @@
 .para_div {
   height: 60vh;
 }
+.buttonsBottom {
+  display: flex;
+}
+.count_para {
+  display: inline-flex;
+  margin: 5%;
+  padding-left: 10%;
+}
+.count_deactivated {
+  margin: 40%;
+  margin-top: 0%;
+  color: #4E4E4E;
+  font-size: 12px;
+}
+
+@keyframes vibe {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-10px);
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+
+.count_activated {
+  font-size: 17px;
+  font-weight: 400;
+  color: #242424;
+  transform: translatey(0px);
+  animation: vibe 5s ease-in-out infinite;
+}

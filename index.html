@@ -173,21 +173,31 @@
                 </p>
               </div>
 
-              <a onclick="nextPara()">
-              <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
-                  <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
-                  <desc>Created with Sketch.</desc>
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
-                          <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
-                          <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
-                              <tspan x="73" y="1213">NEXT</tspan>
-                          </text>
-                      </g>
-                  </g>
-              </svg>
-              </a>
+              <div class="buttonsBottom">
+                <a onclick="nextPara()">
+                <svg width="105px" height="41px" viewBox="0 0 105 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="nextButton">
+                    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Desktop" transform="translate(-55.000000, -1183.000000)">
+                            <rect id="Rectangle-6" fill="#CF6766" x="55" y="1183" width="105" height="41"></rect>
+                            <text id="NEXT" font-family="OpenSans-Semibold, Open Sans" font-size="24" font-weight="500" letter-spacing="2" fill="#FFFFFF">
+                                <tspan x="73" y="1213">NEXT</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+                </a>
+
+                <div class="count_para">
+                  <p id="para_1" class="count_deactivated">1</p>
+                  <p id="para_2" class="count_deactivated">2</p>
+                  <p id="para_3" class="count_deactivated">3</p>
+                  <p id="para_4" class="count_deactivated">4</p>
+                </div>
+              </div>
+
           </div>
         </div>
       </section>
@@ -250,18 +260,26 @@
     ];
 
     var para_main = document.getElementById('para_area');
+    var para_counts = ["para_1", "para_2", "para_3", "para_4"];
+    document.getElementById("para_1").classList.add("count_activated");
+    // console.log(document.getElementById("para_1").classList);
     k = 0;
 
     function nextPara() {
       if (k == para_text.length-1) {
         para_main.classList.remove("reg_para");
+        document.getElementById(para_counts[k]).classList.remove("count_activated");
         k = 0;
+        document.getElementById(para_counts[k]).classList.add("count_activated");
       } else {
         para_main.classList.add("reg_para");
         k++;
       }
       let current_text = para_text[k].toString();
       para_main.innerHTML=current_text;
+      document.getElementById(para_counts[k-1]).classList.remove("count_activated");
+      document.getElementById(para_counts[k]).classList.add("count_activated");
+
     }
 
     // for (var i = 0; i < names.length; i++) {
