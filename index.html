@@ -201,6 +201,65 @@
           </div>
         </div>
       </section>
+      <section class="main_section fourth_background">
+        <h2>
+          What do the numbers look liek globally?
+        </h2>
+      </section>
+      <section class="main_section fifth_background">
+        <div class="container">
+          <div class="row top_row">
+            <div class="col-lg-12 col-md-12">
+              <div class="country_box">
+                <h2 class="country_headline" id="c_headline">
+                  More women are killed in <span class="country_name">India</span> than anywhere else.
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row bottom_row">
+            <div class="col-lg-8 col-md-8">
+              <div class="country_img_box">
+                <img src="svg_maps/in.svg" alt="" width="50%"  class="country_img img-fluid animated" id="country_svg">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div>
+                <div class="stat_box">
+                  <div>
+                    <h1 class="country_number" id="tot_killed">10,700</h1>
+                    <p>Total Women and Girls Killed</p>
+                  </div>
+                </div>
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+                <!-- TODO: MAKE A BLUE BOX W LINKS TO EACH COUNTRY. EACH COUNTRY ONCLICK PASSES A COUNTRY NAME VAR TO FUNCTION THAT CHNAGES COUNTRY TO GIVEN COUNTRY NAME -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+        <!-- ______________________________________________________________ -->
+
+                <div class="blue_box">
+                  <p onclick="change_country('india')" id='india'>India</p>
+                  <p onclick="change_country('nigeria')" id="nigeria">Nigeria</p>
+                  <p onclick="change_country('brazil')" id="brazil">Brazil</p>
+                  <p onclick="change_country('pakistan')" id="pakistan">Pakistan</p>
+                  <p onclick="change_country('china')" id="china">China</p>
+                  <p onclick="change_country('russia')" id="russia">Russia</p>
+                  <p onclick="change_country('usa')" id="usa">USA</p>
+                  <p onclick="change_country('drc')" id="drc">DRC</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
   <script type="text/javascript">
@@ -258,7 +317,6 @@
     "While countries with larger populations have more women killed, “In industrialized countries, a general decrease in homicide rates has not been accompanied by an equivalent decline in the violent deaths of women, in part because levels of intimate partner homicide remain high.”",
     "Learn more about Intimate Partner Violence in the <b>United States</b> in our <a target='_blank' href='http://google.com/about'>essay about Murder-Suicides.</a>"
     ];
-
     var para_main = document.getElementById('para_area');
     var para_counts = ["para_1", "para_2", "para_3", "para_4"];
     document.getElementById("para_1").classList.add("count_activated");
@@ -285,6 +343,76 @@
     // for (var i = 0; i < names.length; i++) {
     //   document.getElementById('num').innerHTML = violence_types[names[i]]['num'];
     // }
+
+
+    var countrys = {
+      india: {
+        name: "India",
+        tot_killed: 10700,
+        country_img: "in.svg",
+        headline: "More women are killed in <span class='country_name'>India</span> than anywhere else."
+      },
+      nigeria: {
+        name: "Nigeria",
+        tot_killed: 6400,
+        country_img: "ng.svg",
+        headline: "Genital Mutilation, and Child Marriage are rampant in <span class='country_name'>Nigeria</span>."
+      },
+      brazil: {
+        name: "Brazil",
+        tot_killed: 5700,
+        country_img: "br.svg",
+        headline: "Women are often targeted in homicdes and drug trafficking operations in <span class='country_name'>Brazil</span>."
+      },
+      pakistan: {
+        name: "Pakistan",
+        tot_killed: 4400,
+        country_img: "pk.svg",
+        headline: "Threats of honour killings often keep women hostage in life-threatning situations in <span class='country_name'>Pakistan</span>."
+      },
+      china: {
+        name: "China",
+        tot_killed: 3900,
+        country_img: "cn.svg",
+        headline: "Sex-selective abortion, female infanticide, and deliberate neglect of girls in <span class='country_name'>China</span> is reocurring."
+      },
+      russia: {
+        name: "Russia",
+        tot_killed: 3800,
+        country_img: "ru.svg",
+        headline: "One in four families in <span class='country_name'>Russia</span> experience domestic violence."
+      },
+      usa: {
+        name: "USA",
+        tot_killed: 3400,
+        country_img: "us.svg",
+        headline: "Rape and the lack of access to justice in rape cases is widspread in the <span class='country_name'>USA</span>. From the streets to the whitehouse."
+      },
+      drc: {
+        name: "DRC",
+        tot_killed: 2900,
+        country_img: "cd.svg",
+        headline: "48 women are sexually assaulted every hour in the <span class='country_name'>DRC</span>."
+      }
+    }
+    var country_names = ["india", "nigeria", "brazil", "pakistan", "china", "russia", "usa", "drc"];
+    let c_count = 0;
+    let current_country_img = document.getElementById("country_svg");
+    let current_country_headline = document.getElementById("c_headline");
+    let current_country_tot_killed = document.getElementById("tot_killed");
+
+    function change_country(countryName) {
+      // if (c_count == country_names.length-1) {
+      //   c_count = 0;
+      // } else {
+      //   c_count++;
+      // }
+      document.getElementById(countryName.toString()).classList.add("activated_p");
+      current_country_img.src="svg_maps/" + countrys[countryName]["country_img"].toString();
+      current_country_headline.innerHTML=countrys[countryName]["headline"].toString();
+      current_country_tot_killed.innerHTML=countrys[countryName]["tot_killed"];
+      console.log("change country function is being fired!");
+    }
 
   </script>
   <script type="text/javascript">
