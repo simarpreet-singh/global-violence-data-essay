@@ -23,7 +23,14 @@
   transition: font-size .4s;
 
 }
-
+.author_credit {
+  text-align: center;
+  color: #FAEFEA;
+}
+.author_credit > a {
+  text-align: center;
+  color: #CF6766;
+}
 .intro_background {
   background-image: url('arthur-edelman-globes-sketch.png');
   background-repeat: no-repeat;
@@ -256,6 +263,10 @@
 /* Fourth Section */
 .fourth_background {
   background-color: #FAEFEA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Fifth Section */
